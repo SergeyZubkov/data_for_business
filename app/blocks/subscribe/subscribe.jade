@@ -1,0 +1,24 @@
+include ../radio/radio
+include ../btn/btn
+
+mixin subscribe()
+	+b.subscribe&attributes(attributes)
+			.row
+				.col-md-4
+					h2 Подписка
+					+e.subtitle.
+						Выбирайте, получать только материалы или c домашними заданиями.
+					+e('form').form
+						+e.label Куда присылать уроки
+						input(type='text')
+						+e.label Что присылать
+						+radio({checked: true, value: 'subscribe-1', text: '16 уроков по аналитике', price: '2250', name: 'subscribe'})
+						+radio({checked: false, value: 'subscribe-2', text: '16 уроков по аналитике, 4 домашних задания', price: '5450', name: 'subscribe'})
+						+btn._subscribe
+							| Подписаться на курс
+					+e.subtitle
+						| Подписываясь, вы даёте согласие на обработку персональных данных на
+						a(href='#') этих условиях
+				.col-md-6.col-md-offset-2
+					+e('img').img&attributes({src: '/assets/subscribe.png'})
+		block

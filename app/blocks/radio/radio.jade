@@ -1,0 +1,8 @@
+mixin radio(data)
+	+b('label').radio
+		+e('input').input&attributes({type: 'radio', name: data.name, value: data.value,checked: data.checked})
+		+e.border
+		+e.text #{data.text}
+		+e.price #{data.price} 
+			
+		block

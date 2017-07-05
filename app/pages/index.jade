@@ -1,0 +1,37 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/bg-yellow-image/bg-yellow-image
+include /blocks/main/main
+include /blocks/why/why
+include /blocks/course/course
+include /blocks/you-get/you-get
+include /blocks/homeworks/homeworks
+include /blocks/testimonials/testimonials
+include /blocks/author/author
+include /blocks/faq/faq
+include /blocks/yellow-bg/yellow-bg
+include /blocks/subscribe/subscribe
+include /blocks/footer/footer
+
+
+
+
+
+
+block head
+	- var pageTitle = 'Данные для бизнеса. Онлайн курс об аналитике';
+block content
+	.container
+		+main
+		+why
+		+course
+		+you-get
+	+homeworks
+	.container
+		+testimonials
+		+author
+	+faq
+	+yellow-bg
+		+subscribe
+			.container
+		+footer

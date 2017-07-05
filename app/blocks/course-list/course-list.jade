@@ -1,0 +1,10 @@
+mixin course-list(data)
+	+b.course-list&attributes(attributes)
+		for item in data
+			+e.item.col-md-4.col-sm-6
+				+e.item-title
+					| #{item.title}
+				for subtitle in item.subtitles
+					+e.item-subtitle
+						| #{subtitle}
+		block

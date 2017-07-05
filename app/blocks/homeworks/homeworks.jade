@@ -1,0 +1,24 @@
+include ../text/text
+
+mixin homeworks()
+	+b.homeworks&attributes(attributes)
+		.container
+			h2 Домашки
+			.row
+				.col-md-9
+					+text.
+						На курсе 6 практических заданий. Студент своими руками делает то, о чём идёт речь: строит модели в экселе, пишет SQL-запросы, прогнозирует LTV, считает достоверность А/Б тестов.
+					+text.
+						Я проверяю результаты и даю рецензии: указываю на ошибки, подсказываю улучшения, отвечаю на вопросы. Домашки помогают примерить абстрактную теорию к жизни, лучше понять и запомнить принципы.
+			.row
+				.col-md-9
+					+e('img').img-main&attributes({src: '/assets/homeworks-main.png'})
+				.col-md-3
+					+e('img').img-coment&attributes({src: '/assets/homeworks-coment-1.png'})
+					+e('img').img-coment&attributes({src: '/assets/homeworks-coment-2.png'})
+					+e.number-accent
+						+e.number-accent-title 6
+						+e.number-accent-subtitle.
+							практических заданий: 
+							SQL, когорты, прогноз LTV и анализ А/Б тестов 
+		block

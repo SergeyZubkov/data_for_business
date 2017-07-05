@@ -1,0 +1,72 @@
+.you-get
+	display block
+	&__item
+		margin 85px 0
+	&__figure
+		position relative
+	&__img
+		width 100%
+		margin-top -22px
+	&__img-caption
+		position absolute
+		right -250px
+		bottom 16%
+		&-title
+			font-size 35px
+			width 200px
+			margin-bottom 30px
+			position relative
+			&:after
+				content ''
+				display block
+				size(80px)
+				border-radius 50%
+				background #FFE694
+				position absolute
+				top 30%
+				left 20%	
+				z-index -1
+		&-subtitle
+			width 140px
+			line-height 1.4
+			&:after
+				content ''
+				display block
+				width 70px
+				height 2px
+				background #ddd
+				position relative
+				top -20px
+				left -60%
+	h2
+		margin-bottom 40px
+.you-get__item.you-get__item_left
+	& .you-get__img-caption
+		right auto
+		left -200px
+		&-subtitle
+			&:after
+				left auto
+				right -120%
+	
+		
+@media only screen and (min-width : 320px) and (max-width : 480px) 
+	.you-get
+		.text
+			padding-bottom 140px
+		&__img-caption
+			right auto
+			left auto !important
+			top -110px
+			&-title
+				font-size 18px
+				margin-bottom 10px
+			&-subtitle
+				font-size 12px
+				&:after
+					top auto !important
+					left 30%	!important
+					right auto !important
+					bottom -20px !important
+					transform rotate(90deg) !important
+					width 30px !important

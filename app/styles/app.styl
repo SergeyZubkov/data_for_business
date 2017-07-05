@@ -1,0 +1,35 @@
+import('sprites/*')
+import('helpers/svg-size')
+@import 'helpers/variables'
+@import 'helpers/mixins'
+@import 'helpers/fonts'
+@import 'helpers/optimize'
+
+import('../blocks/**/*')
+
+h2
+	font-size 45px
+	font-weight 800
+	line-height 1.2
+	margin 20px 0
+
+strong
+	font-weight bold
+	
+img
+	width 100%
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 480px) 
+	h2
+		font-size 35px
+	.main 
+		padding-top 0
+		h1
+			margin-top 20px
+			font-size 30px
+		h4
+			font-size 20px
+	.sm-column-reverse 
+		display flex
+		flex-direction column-reverse

@@ -1,0 +1,50 @@
+include ../text/text
+
+mixin you-get()
+	+b.you-get&attributes(attributes)
+		+e.item
+			h2 Понимать, что происходит
+			.row.sm-column-reverse
+				.col-md-7
+					+e.figure
+						+e('img').img&attributes({src: '/assets/you-get-1.png'})
+						+e.img-caption
+							+e.img-caption-title
+								| Чёткие инструкции
+							+e.img-caption-subtitle
+								| как в уроке про 
+								strong декомпозицию
+				.col-md-5
+					+text.
+						Чтобы оценить ситуацию, нужно знать, на что смотреть. На курсе учатся раскладывать запросы бизнеса на понятные аналитические задачи.
+		+e.item._left
+			h2 Уметь достать данные из базы (а не просить программиста)
+			.row
+				.col-md-5
+					+text.
+						Студенты учатся писать запросы в базу, чтобы сразу видеть любую статистику.
+				.col-md-7
+					+e.figure
+						+e('img').img&attributes({src: '/assets/you-get-2.png'})
+						+e.img-caption
+							+e.img-caption-title
+								| Простой язык
+							+e.img-caption-subtitle
+								|	как в уроке про 
+								strong SQL-запросы
+		+e.item
+			h2 Знать, какое принять решение
+			.row.sm-column-reverse
+				.col-md-7
+					+e.figure
+						+e('img').img&attributes({src: '/assets/you-get-3.png'})
+						+e.img-caption
+							+e.img-caption-title
+								| Примеры из практики
+							+e.img-caption-subtitle
+								| как в уроке про  
+								strong когортный анализ
+				.col-md-5
+					+text.
+						Где давать рекламу, кого из сотрудников повысить, в какой бизнес вкладывать — аналитика поможет выбрать.
+		block
